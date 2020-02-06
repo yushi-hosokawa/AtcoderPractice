@@ -1,5 +1,16 @@
 #include <bits/stdc++.h>
 using namespace std;
+
+//関数の作り方
+int findSumOfDigits(int n){
+  int sum = 0;
+  while (n>0){
+    sum += n%10;
+    n/=10;
+  }
+  return sum;
+}
+
 int main(){
 
   /*
@@ -17,5 +28,20 @@ int main(){
 
   int a = 10;
   cout << bitset<20>(a) <<endl;
+
+  /*
+  //複数の入力を配列に格納するやり方
+  for(int i =0; i<N; ++i)cin >>a[i];
+  
+  //要素数N、配列a[]内の要素について、大きい数字からのsort
+  sort(a,a+N,greater<int>());
+
+  //要素数N,配列a[]内の要素について、小さい数字からのsort
+  sort(a,a+N);
+
+
+  */
+
+
 
 }
