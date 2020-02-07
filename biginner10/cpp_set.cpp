@@ -3,7 +3,8 @@ using namespace std;
 
 
 /*
-http://vivi.dyndns.org/tech/cpp/set.html
+//使えるサイト　http://vivi.dyndns.org/tech/cpp/set.html
+mapものってる
 C++ の std::set とは順序付けされたデータを複数保持することができる順序付集合のコンテナクラスだぞ。
 データを順不同に順序付集合に追加すると、その値をキーにし自動的にソートして内部に格納してくれるぞ。
 つまり、要素が常にソートされた状態の配列のようなものだ。
