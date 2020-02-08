@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-//あらかじめdefineしておく
+//あらかじめdefineしておくs
 const unsigned int BIT_FLAG_0 = (1 << 0); // 0000 0000 0000 0001
 const unsigned int BIT_FLAG_1 = (1 << 1); // 0000 0000 0000 0010
 const unsigned int BIT_FLAG_2 = (1 << 2); // 0000 0000 0000 0100
@@ -23,6 +23,6 @@ int main(){
   //目に見える形に表示するためにbitsetを使う。基本表示の時以外はいらない
   cout <<bitset<8>(a) <<" : "<<bitset<8>(b)<<endl;
 
-  int e = 2;
+  int e = 1;
   cout <<e<<endl;
 }
