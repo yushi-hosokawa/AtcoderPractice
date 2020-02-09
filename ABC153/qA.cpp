@@ -7,9 +7,11 @@ int main(){
 
     cin >> H >> A ;
     int sum = A;
-    while (H>=sum){
+    while (H>sum){
       sum += A;
       ++counter;
     }
     cout <<counter;
 }
+//多分10分ぐらい
+//taipo多すぎ
