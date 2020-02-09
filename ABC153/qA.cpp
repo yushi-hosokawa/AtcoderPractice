@@ -1,0 +1,15 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int H , A;
+    int counter=1;
+
+    cin >> H >> A ;
+    int sum = A;
+    while (H>=sum){
+      sum += A;
+      ++counter;
+    }
+    cout <<counter;
+}
