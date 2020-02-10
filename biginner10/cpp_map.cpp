@@ -17,6 +17,8 @@ int main(){
 
 //特に作ってないkeyを入力すると、valueとして０が入っている
 //0に1を足すので1が出力
-  cout <<(mp["add"]+1)<<endl;
+  cout <<(mp["add"]+1)<<endl
+
+  //自動の入力を許さないときはmp.at(key)を使えばよい
   cout <<mp.at("abc")<<endl;
 }

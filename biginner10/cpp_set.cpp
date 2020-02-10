@@ -3,7 +3,7 @@ using namespace std;
 
 
 /*
-//使えるサイト　http://vivi.dyndns.org/tech/cpp/set.html
+//使えるサイト　ｃ
 mapものってる
 C++ の std::set とは順序付けされたデータを複数保持することができる順序付集合のコンテナクラスだぞ。
 データを順不同に順序付集合に追加すると、その値をキーにし自動的にソートして内部に格納してくれるぞ。
@@ -24,7 +24,7 @@ int main(){
   cout <<"先頭要素の出力:"<< *itr <<endl; //itrの持つアドレスの中身を表示する
 
   //set型のstの要素を全部出力する方法
-  cout << "前要素の出力"<<endl;
+  cout << "全要素の出力"<<endl;
   for(auto itr2 = st.begin(); itr2 != st.end(); ++itr2){
     cout << *itr2 << endl;
   }
