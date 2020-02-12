@@ -40,3 +40,17 @@ int findSumOfDigits(int n) {
 
 //●
 //小数点が出力されているような問題はprintf("%.10f\n",a)を使って出力するとよい
+
+//●
+//char型とstring型でイコールをとることはできない
+/*
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+  string str = "a";
+  char c = 'a';
+  bool b = str == c; // できない
+}
+*/
+//char型を集めてstring型を作ることは可能

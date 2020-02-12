@@ -1,3 +1,5 @@
+//内容は https://atcoder.jp/contests/apg4b/tasks/APG4b_n
+
 #include <bits/stdc++.h>
 #define rep(i,n) for (int i= 0;i<(n);++i)
 using namespace std;
@@ -11,8 +13,11 @@ int main(){
   //各要素には0が入ってる
   vector <int> vec (n);
   int x =10;
+  vec[1] =500;
   //配列のような要素の取得が可能
-  cout<<"vec[1]の要素 :"<<vec[1]<<endl;
+  //atを使っても取得可能
+  //vec[1]の書き方でなくvec.at(1)の書き方のほうがサイズ外のときエラーが出るからよい
+  cout<<"vec[1]の要素 :"<<vec.at(1)<<"同じ要素"<<vec[1]<<endl;
 
   //配列のように要素に値を代入
   //定義より大きい数を指定しようとするとおかしくなる
@@ -63,16 +68,37 @@ int main(){
 
   //降順ソート(大きい数から)
   sort(vec3.begin(),vec3.end(),greater<int>());
-
   cout<<"降順ソート後"<<endl;
   for (auto itr2=vec3.begin();itr2 !=vec3.end();++itr2)cout<<*itr2<<endl;
+
+  //順番反転ソート後
+  //昇順＋反転ソート＝降順ソート
+  sort(vec3.begin(),vec3.end());
+  cout <<"順番反転後"<<endl;
+  for (auto itr2=vec3.begin();itr2 !=vec3.end();++itr2)cout<<*itr2<<endl;
+
+
 
   //サイズを定義しないvetorはpush_backとかで要素を増やすときのみ使える
   //何もないときにvec5[2]とかを呼ぶとエラー
   vector<int> vec5;
   vec5.push_back(1);
   vec5.push_back(2000);
-  cout<<vec5[1]<<endl;
+  vec5.push_back(100);
+  cout<<vec5[1]<<"   "<<vec5.size()<<endl;
+
+  //pop_backで要素を削ることができる
+  vec5.pop_back();
+  cout<<vec5[1]<<"   "<<vec5.size()<<endl;
+  /*
+  初期値の指定
+次のように書くと、配列の各要素の初期値を指定できます。
+vector<型> 配列名(要素数, 初期値);vector<型> 配列名(要素数, 初期値);
+例えばvector<int> vec(3, 5);と書いた場合、配列変数vecは{5, 5, 5}で初期化されます。
+
+  */
+  vector<int> vec6(3,5);//配列変数vecは{5, 5, 5}で初期化
+
 
   return 0;
 }
