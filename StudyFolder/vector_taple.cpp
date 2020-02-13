@@ -7,6 +7,7 @@ typedef pair<int,int> P;
 
 //複数のtapleに対して,vectorを使ってsortする方法
 //これで複数の要素を持つもののsort を行い、別要素で出力も可能
+//pairも同様に行えるはず
 //ラムダ式とかつかっての詳しい条件での並び替えは https://minus9d.hatenablog.com/entry/2014/07/05/215756
 int main() {
 
@@ -37,10 +38,11 @@ int main() {
   //もう一度出力
   //foreach的な書きかたの時、条件の左の書き方はauto [変数] で自動変換してくれる
   for (auto t : a) {
-    int x, y, z;
+    int x, y;
     //tieで各要素に区切ってる
-    tie(x, y, z) = t;
-    cout << x << " " << y << " " << z << endl;
+    //いらない要素はignoreで消せる
+    tie(x, y, ignore) = t;
+    cout << x << " " << y << " "  << endl;
   }
 
 
