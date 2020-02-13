@@ -2,6 +2,20 @@
 //数字iを文字列cに変換する時は一桁ごとにcharで一文字ずつ'0'を足して変換し、最後にstringで足し合わせる感じ
 //一つの桁に対して、char c1 ='0'+i  その後、s=c1+c2+c3+...
 
+//to_string()で中の引数をstring型にできる
+//int number = 100;
+//string s = to_string(number);
+
+//●
+//逆に文字列からint型にするのはstoi 関数を使う
+//doubleへの変換はstodでできる
+//long long への変換はstollでできる?
+//int main(){
+  string s = "100";
+  int n = stoi(s);
+  cout <<n <<endl;
+}
+
 //●
 //10進法の数字の一つ一つの要素の和の考え方
 //これは10進法の一つ一つの要素の取り出し方に使える
@@ -54,3 +68,20 @@ int main() {
 }
 */
 //char型を集めてstring型を作ることは可能
+
+
+//●
+//vectorでループを回すとき、foreach文が使える
+//このとき、ループの書き方で：が使われているのに注意
+
+/*
+//vector <int> vec{3,4,5};
+//for (auto i: a){
+  処理
+}
+*/
+
+//●
+//複数の要素を持つものをある一つの要素を使ってsortする時には複数のvectorを使ってもいいが次のvectorの中にtapleを突っ込むのもあり？
+//やり方、ラムダ式を立てるか、比較関数を立てる
+//https://minus9d.hatenablog.com/entry/2014/07/05/215756
