@@ -59,7 +59,7 @@ int main(){
 
 //hを10進数の整数に変換
 //mapや四則演算に使える
-  cout <<h.to_ullong()<<endl;
+  cout <<hgit <<endl;
 
   //bitsetの操作一覧
   // https://atcoder.jp/contests/apg4b/tasks/APG4b_ac
