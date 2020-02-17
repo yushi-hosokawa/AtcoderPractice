@@ -13,7 +13,7 @@ int main(){
     return 0;
   }
   bool check = false;
-  for (int i = 2;i<(x/2);i++){
+  for (int i = 2;i<x;i++){
     if((x%i)==0){
       check =true;
       break;
@@ -23,7 +23,7 @@ int main(){
   while(check){
     bool ans =false;
     x+=1;
-    for(int i = 2;i<(x/2);i++){
+    for(int i = 2;i<x;i++){
       if ((x%i)==0){
         ans =true;
         break;
