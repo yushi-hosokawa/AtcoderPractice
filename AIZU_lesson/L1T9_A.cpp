@@ -3,7 +3,7 @@
 using namespace std;
 typedef long long ll;
 typedef pair<int,int> P;
-
+//これむずくね
 vector <string> split(string str, char del){
   int first = 0;
   int last =str.find_first_of(del);
