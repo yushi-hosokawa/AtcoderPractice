@@ -98,6 +98,9 @@ vector<型> 配列名(要素数, 初期値);vector<型> 配列名(要素数, 初
 
   */
   vector<int> vec6(3,5);//配列変数vecは{5, 5, 5}で初期化
+  vector <int> vec7{3,2,5,7};
+  sort(vec7.begin(),(vec7.begin()+1));
+  rep(i,4)cout<<vec7.at(i)<<endl;
 
 
   return 0;
