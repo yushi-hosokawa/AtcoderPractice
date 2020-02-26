@@ -6,11 +6,5 @@ typedef pair<int,int> P;
 
 
 int main(){
-  int n, r ,x;
-  cin >>n>>r;
-  x =r+(100*(10-n));
-  if(n>=10){
-    cout <<r<<endl;
-  }  else cout<< x<<endl;
 
 }

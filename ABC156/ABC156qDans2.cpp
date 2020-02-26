@@ -8,7 +8,7 @@ struct mint {
   ll x; // typedef long long ll;
   mint(ll x=0):x((x%mod+mod)%mod){}
   mint operator-() const { return mint(-x);}
-  mint& operator+=(const mint a) {
+  mint& operator+=(const mint a) { //足算するたびにmodより大きくなったらmodで引いてる
     if ((x += a.x) >= mod) x -= mod;
     return *this;
   }
@@ -58,20 +58,22 @@ mint f(int n){
   if(n == 0 ) return 1 ;//0乗なら1
   mint x = f(x,n/2);
   x *= x; //f(N) =f(N/2)^2のに置き換えることが可能。これを再起的に繰り返す
-  if(n%2 == 1)x *= 2; //nが奇数のときはn倍する
+  if(x>=mod)x -= mod;
+  if(n%2 == 1)x *= n; //nが奇数のときはn倍する
   return x;
 }
 
 mint choose(int n , int a){
 
-  mint x =1 ;//分子
-  mint y =1;//分母
+  mint x =1 , y =1;//分母,分子
   rep(i,a){
     x *= n-i;//分子を(n*n-1*...n-(a-1))になるように
+    if(x>=mod)x -= mod;
     y *= i+1; //分母をa!になるように
+    if(y>=mod)x -= mod;
   }
 
-  return　x/y;
+  return　x / y;
 }
 
 int main(){

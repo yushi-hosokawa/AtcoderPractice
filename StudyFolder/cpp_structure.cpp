@@ -23,6 +23,7 @@ struct Mypair{
   }
 
   //コピーコンストラクタ
+  //引数にこの構造体を入れてるからコピーコンストラクタ?
   Mypair(const Mypair &old){ //oldにはコピー元のMypair型構造体がわたされる
     cout <<"copy constructor called"<<endl;
     x = old.x +1;
@@ -44,6 +45,19 @@ struct Mypair{
   }
 
 };
+
+
+//実はpairとかも構造体を使って実装されている
+struct MyPair2 {
+  int x;     // 1つ目のデータはint型であり、xという名前でアクセスできる
+  string y;  // 2つ目のデータはstring型であり、yという名前でアクセスできる
+};
+
+int main() {
+  MyPair p = {12345, "hello"};  // MyPair型の値を宣言
+  cout << "p.x = " << p.x << endl;
+  cout << "p.y = " << p.y << endl;
+}
 
 
 
