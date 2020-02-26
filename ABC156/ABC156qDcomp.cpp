@@ -1,4 +1,4 @@
-#include <iostream.h>
+#include <bits/stdc++.h>
 #define rep(i,n) for (int i= 0;i<(n);++i)
 using namespace std;
 typedef long long ll;
@@ -8,8 +8,9 @@ const ll MOD = 1000000007;
 
 //関数名をpowにするとstd::powが呼ばれておかしくなっちゃう?
 //https://cpprefjp.github.io/reference/cmath/pow.html
+//こっちのpowはfloatだからオーバーフローしちゃうよね
 
-ll pow(ll a,ll n){ //aのn乗計算 O(log(n))
+ll power(ll a,ll n){ //aのn乗計算 O(log(n))
   if(n == 0)return 1;
 
   ll res = 1;
@@ -26,7 +27,7 @@ ll pow(ll a,ll n){ //aのn乗計算 O(log(n))
 //フェルマーの小定理より、aで割るという処理はinv(a)をかけることと同じになる
 //そのinv(a)はa^(MOD-2)で求められる
 ll inv(ll a){
-  return pow(a,MOD-2);
+  return power(a,MOD-2);
 }
 
 
@@ -48,7 +49,7 @@ int main(){
 //  cout<<comb(N,A)<<" : " <<comb(N,B)<<endl;
 //  cout <<power(2,N)<<endl;
 
-  ll ans = pow(2,N) -comb(N,A) - comb(N,B) -1;
+  ll ans = power(2,N) -comb(N,A) - comb(N,B) -1;
   //MODを使ってる引き算は負になった時足さないといけない
   while(ans <0)ans +=MOD;
 

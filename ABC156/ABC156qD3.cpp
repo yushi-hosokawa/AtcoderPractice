@@ -3,7 +3,7 @@
 using namespace std;
 typedef long long ll;
 typedef pair<int,int> P;
-const ll mod = 1e9+7;
+const ll mod = 1000000007;
 
 ll pow(ll a,ll n){ //aのn乗計算 O(log(n))
   if(n == 0)return 1;
