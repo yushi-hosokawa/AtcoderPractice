@@ -46,10 +46,6 @@ int main(){
         }
       }
     }
-    cout <<(ans-1)<<endl;
+    cout <<(ans-1)/(1000000000+7)<<endl;
   }
-
-
-
-
 }
