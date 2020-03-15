@@ -6,5 +6,16 @@ typedef pair<int,int> P;
 
 
 int main(){
+  string s ;
+  cin >>s ;
+  char a =s[0];
+  char b =s[1];
+  char c =s[2];
+  if(a==b&&a==c&&b==c){
+    cout <<"No"<<endl;
+    return 0;
+  }
+  cout <<"Yes"<<endl;
+  return 0;
 
 }
