@@ -23,12 +23,13 @@ int main(){
   for(int i=1;i<=n;i++){
     x*=i;
   }
-  cout<<x<<endl;
   vector<string> ans(x);
 
-  //文字の出力回数
-  for(int i =0;i<n;i++){
-    ans.at(i) +=chara[i];
+
+  //nCiループを回して出力
+  for(int i =1;i<=n;i++){
+
+    for(int j = )
   }
 
   for(auto itr=ans.begin();itr!=ans.end();++itr){
