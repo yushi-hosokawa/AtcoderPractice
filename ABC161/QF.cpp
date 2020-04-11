@@ -6,10 +6,5 @@ typedef pair<int,int> P;
 
 
 int main(){
-  int x,y,a,b,c;
-  cin >>x>>y>>a>>b>>c;
-  vector <int> p(a);
-  vector <int> q(b);
-  vector <int> r(c);
 
 }
