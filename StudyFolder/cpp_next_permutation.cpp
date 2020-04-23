@@ -16,7 +16,7 @@ do{
         if(i!=3)cout<<"";
     }
     cout<<endl;
-}while(next_permutation(a.begin(),a.end()));
+}while(next_permutation(vec.begin(),vec.end()));
 
 
 
