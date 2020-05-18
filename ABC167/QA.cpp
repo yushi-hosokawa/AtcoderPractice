@@ -6,5 +6,19 @@ typedef pair<int,int> P;
 
 
 int main(){
+  string s;
+  string t;
+  cin >>s;
+  cin >>t;
+  int x =s.length();
+  bool flag = true;
+  rep(i,x){
+    if(s[i]!=t[i]){
+      flag = false;
+    }
+  }
+  if(flag)cout<<"Yes";
+  else cout <<"No";
+  return 0;
 
 }
