@@ -29,9 +29,14 @@ int main(){
     cout << *itr2 << endl;
   }
 
+//重複を許すやつはmultiset
+//これは重複要素の一つだけ消したりできる
 
+//https://atcoder.jp/contests/apg4b/tasks/APG4b_aa
 
-
+//xの要素がstに存在したらその要素を削除して次にいくみたいな時は
+//st.erase(st.find(x));
+//と書かないとダメ
 
 
 }

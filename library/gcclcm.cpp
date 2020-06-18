@@ -23,5 +23,6 @@ int main(){
   cin >>a>>b;
   ll ans = lcm(a,b);
   cout <<lcm(a,b)<<endl;
+  cout <<gcd(a,b)<<endl;
 
 }
