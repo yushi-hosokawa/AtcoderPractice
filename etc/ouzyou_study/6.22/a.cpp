@@ -4,11 +4,9 @@ using namespace std;
 typedef long long ll;
 typedef pair<int,int> P;
 
-//素因数分解は小さい数から割れる数をどんどん割っていく
-//今回上限がN^12乗であるので
-
-
 
 int main(){
-
+    int k;cin>>k;
+    int x = 360/k;
+    cout<<x<<endl;
 }

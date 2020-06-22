@@ -46,6 +46,10 @@ void pf (map<int,int> &mp,int num){
 }
 
 
+//エラトステネスの篩を使って素数を見つける
+//見つけた素数の値を
+
+
 int main(){
   int n;
 	cin >> n;
