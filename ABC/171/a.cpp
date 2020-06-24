@@ -8,5 +8,10 @@ template<class T> inline bool chmax(T& a, T b) { if (a < b) { a = b; return 1; }
 template<class T> inline bool chmin(T& a, T b) { if (a > b) { a = b; return 1; } return 0; }
 
 int main(){
+    string x;cin>>x;
+    if ('A'<=x[0]&&'Z'>=x[0]){
+        cout<<"A"<<endl;
+    }
+    else cout<<"a"<<endl;
 
 }

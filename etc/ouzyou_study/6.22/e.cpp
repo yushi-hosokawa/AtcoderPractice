@@ -7,19 +7,19 @@ typedef pair<int,int> P;
 
 int main(){
     string s;cin>>s;
-    int count = 0;
+    int countb = 0;
+    int ans = 0;
     int n = s.size();
-    for(int i =0;i<n;++i){
-        for(int j = 0;j<n-1;++j){
-            int s1 =s[j];
-            int s2 =s[j+1];
-            if(s1=='B'&&s2=='W'){
-                s[j]='W';
-                s[j+1]='B';
-                ++count;
-            }
+    for(int i = 0;i<n;++i){
+        if(s[i]=='W') {
+            ans+=countb;
         }
+
+        else {
+            countb++;
+        }
+
     }
-    cout<<count<<endl;
+    cout<<ans<<endl;
 
 }

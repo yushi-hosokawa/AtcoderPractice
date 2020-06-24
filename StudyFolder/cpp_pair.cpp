@@ -4,7 +4,7 @@ using namespace std;
 typedef long long ll;
 typedef pair<int,int> P;
 
-int main(){
+int main1(){
   P p(3,1);
   pair<string ,int> p2("abc",3);
   cout<< p.first <<"  :  "<<p2.first<<endl;
@@ -31,4 +31,37 @@ int main(){
     cout <<"a>=b"<<endl;
   }
 
+
+
+
+}
+//二つの要素があり、一つの要素に対してソートを行う時はvectorの中にpairを入れてソート
+int main2(){
+    int n;cin>>n;
+
+    //vectorの中にpairを突っ込む
+    vector<pair<int,int>>pairs(n);
+    for(int i = 0;i<n;i++){
+        int x,y;cin>>x>>y;
+
+        pairs[i]=make_pair(x,y);
+    }
+    //一つ目の要素の小さい順、その後二つ目の小さい順にソートされる
+    sort(pairs.begin(),pairs.end());
+
+    int count = 0;
+    //for文で一つ目の要素が小さい順から呼部ようにする。
+    rep(i,n){
+
+        count+=pairs[i].second;
+        x = pairs[i].first;
+        cout<<i<<"番目の要素はpair("<<pairs[i].first<<","<<pairs[i].second<<")"<<endl;
+
+
+    }
+
+}
+
+int main(){
+    main2();
 }

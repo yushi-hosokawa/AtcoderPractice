@@ -6,15 +6,17 @@ typedef pair<int,int> P;
 
 
 int main(){
-    int n,k;cin>>n>>k;
+    double n,k;cin>>n>>k;
     double ans =0.0;
-    if(n%2==0){
-        ans = pow(((n/2)-1,;
-    }
-    else {
-        ans = pow(n/2,k)+pow((n/2),(n-k+1));
-    }
-    double x = pow(n,n);
-    cout<<setprecision(15)<<ans/pow(n,n)<<endl;
+    //3パターンで場合分け
+
+    //kが一つ選ばれるとき
+    ans += (k-1)*(n-k)*6;
+    ans += (n-1)*3;
+    ans += 1;
+
+    ans /= pow(n,3);
+    cout<<setprecision(15) << ans<<endl;
+
 
 }
