@@ -4,6 +4,16 @@ using namespace std;
 typedef long long ll;
 typedef pair<int,int> P;
 
+//string→intはstoi
+string snum = "1234";
+int inum =stoi(snum);
+
+//char→intはatoi
+char cnum = '9';
+int inum=atoi(cnum);
+
+//int→stringはto_string
+snum=to_string(inum);
 
 //一文字を扱う時はとにかくchar
 //とにかくcharとstringは大小比較できない

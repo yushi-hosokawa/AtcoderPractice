@@ -8,23 +8,19 @@ template<class T> inline bool chmax(T& a, T b) { if (a < b) { a = b; return 1; }
 template<class T> inline bool chmin(T& a, T b) { if (a > b) { a = b; return 1; } return 0; }
 
 int main(){
-    ll n;cin>>n;
-    string y;
-    ll i = 0;
-    //桁数
-    vector<char> x(100);
-    while(n>0){
-        ll a =(n-1)%26;
-        char b ='a'+a;
-        i++;
-        y+=b;
-        n/=26;
+    int n ,a,b;cin>>n>>a>>b;
+    vector<int> s(n);rep(i,n)cin>>s[i];
+    sort(s.begin(),s.end());
+    double def =s[n-1]-s[0];
+    if(s[n-1]-s[0]==0){
+        cout<<-1<<endl;
+        return 0;
     }
-
-    string ans ;
-    rep(i,y.size()){
-        ans+=y[y.size()-i-1];
-    }
-    cout<<ans<<endl;
+    double sum =0;
+    rep(i,n)sum+=s[i];
+    double p = 0;double q = 0;
+    p=b/def;
+    q = a-(b*sum/(n*def));
+    cout<<setprecision(15)<<p<<" "<<q<<endl;
 
 }

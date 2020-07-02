@@ -8,24 +8,26 @@ template<class T> inline bool chmax(T& a, T b) { if (a < b) { a = b; return 1; }
 template<class T> inline bool chmin(T& a, T b) { if (a > b) { a = b; return 1; } return 0; }
 
 int main(){
-    int n ; cin>>n;
-    vector<int> a(n);rep(i,n)cin>>a[i];
-    int q;cin>>q;
-    vector<int> b(q),c(q);rep(i,q)cin>>b[i]>>c[i];
-    vector <int> x (100005);
-    ll sum=0;
+    int n;cin>>n;
+    vector<int >a(n);
+    vector<int>b(n);
     rep(i,n){
-        x[a[i]]++;
-        sum+=a[i];
+        cin>>a[i]>>b[i];
     }
+    vector<P>p(n);
+    rep(i,n){
+        p[i]=make_pair(b[i],a[i]);
 
-    for(int i=0;i<q;i++){
-        int count = x[b[i]];
-        int dif = (c[i]-b[i])*count;
-        x[b[i]]=0;
-        x[c[i]]+=count;
-        sum+=dif;
-        cout<<sum<<endl;
     }
-
+    sort(p.begin(),p.end());
+    ll sum = 0;
+    rep(i,n){
+        sum+=p[i].second;
+        if(sum>p[i].first){
+            cout<<"No"<<endl;
+            return 0;
+        }
+    }
+    cout<<"Yes"<<endl;
+    return 0;
 }
