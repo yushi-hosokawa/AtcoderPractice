@@ -8,9 +8,9 @@ typedef pair<int,int> P;
 string snum = "1234";
 int inum =stoi(snum);
 
-//char→intはatoi
+//char→intはchar型の値から'0'を引く
 char cnum = '9';
-int inum=atoi(cnum);
+int inum=cnum -'0';
 
 //int→stringはto_string
 snum=to_string(inum);

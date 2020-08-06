@@ -106,6 +106,16 @@ vector<型> 配列名(要素数, 初期値);vector<型> 配列名(要素数, 初
   sort(vec7.begin(),(vec7.begin()+1));
   rep(i,4)cout<<vec7.at(i)<<endl;
 
+//2重配列
+    // int型の2次元配列(3×4要素の)の宣言
+    vector<vector<int>> data(3, vector<int>(4));
+    // 入力 (2重ループを用いる)
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 4; j++) {
+            cin >> data.at(i).at(j);
+        }
+    }
+
 
   return 0;
 }

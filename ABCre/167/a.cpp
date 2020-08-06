@@ -9,4 +9,13 @@ template<class T> inline bool chmin(T& a, T b) { if (a > b) { a = b; return 1; }
 
 int main(){
 
+    string s,t;cin>>s>>t;
+    string x;
+    rep(i,s.size()){
+        x+=t[i];
+    }
+    if(s==x)cout<<"Yes"<<endl;
+
+    else cout<<"No"<<endl;
+
 }

@@ -29,6 +29,28 @@ void pf_all(vector<int> &vec ,int num){
   }
 }
 
+vector<int> Eratosthenes( const int N )
+{
+    std::vector<bool> is_prime( N + 1 );
+    for( int i = 0; i <= N; i++ )
+    {
+        is_prime[ i ] = true;
+    }
+    std::vector<int> P;
+    for( int i = 2; i <= N; i++ )
+    {
+        if( is_prime[ i ] )
+        {
+            for( int j = 2 * i; j <= N; j += i )
+            {
+                is_prime[ j ] = false;
+            }
+            P.emplace_back( i );
+        }
+    }
+    return P;
+}
+
 //mapで要素数を取得する
 //mapには存在する素因数のみが格納される
 //計算量は上の関数と変わりません
@@ -43,6 +65,27 @@ void pf (map<int,int> &mp,int num){
     }
     if(ans)mp[i] = ans;
   }
+}
+
+//素数であるかどうかを判定。boolを返す
+bool IsPrime(int num)
+{
+    if (num < 2) return false;
+    else if (num == 2) return true;
+    else if (num % 2 == 0) return false; // 偶数はあらかじめ除く
+
+    double sqrtNum = sqrt(num);
+    for (int i = 3; i <= sqrtNum; i += 2)
+    {
+        if (num % i == 0)
+        {
+            // 素数ではない
+            return false;
+        }
+    }
+
+    // 素数である
+    return true;
 }
 
 
